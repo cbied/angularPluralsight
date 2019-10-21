@@ -26,14 +26,12 @@
     
         <div class="table-responsive">
             <table class="table"
-            *ngIf='products && products.length'
-            >
+            *ngIf='products && products.length'>
                 <thead>
                     <tr>
                         <th>
                             <button class="btn btn-primary"
-                            (click)='toggleImage()'
-                            >
+                            (click)='toggleImage()'>
                                 {{ showImage ? 'Hide' : 'Show' }} Image
                             </button>
                         </th>
@@ -47,8 +45,7 @@
 
                 <tbody>
                     <tr
-                    *ngFor='let product of filteredProducts'
-                    >
+                    *ngFor='let product of filteredProducts'>
                     <td>
                         <img *ngIf='showImage'
                         [src]='product.imageUrl' 
